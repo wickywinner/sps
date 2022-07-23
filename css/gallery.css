@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container__slide {
+    position: relative;
+    text-align: center;
+    padding: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: relative;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+
+
+
+.gallery{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0,0,0,0.5);
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    padding:2rem;
+}
+.image__class{
+    background:var(--color-bg2);
+    padding:2rem;
+    border:1px solid transparent ;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.image__class:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+/*============================================media Screen (Tablets)==================== */
+
+
+
+@media screen and (max-width:1024px) {
+    .content{
+        grid-template-columns: repeat(1,1fr);
+        gap:1.5rem;
+    }
+    .image__class{
+        padding: 1rem;
+    }
+    .container__slide {
+        position: relative;
+        text-align: center;
+        padding:1rem;
+        margin-top: 1rem;
+      }
+}
