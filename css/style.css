@@ -431,7 +431,7 @@ footer ul li a:hoover{
         display: inline-block;
         background: transparent;
         font-size: 1.8rem;
-        color: var(--color-white);
+        color: var(--color-danger);
         cursor: pointer;
     }
     nav button#close-menu-btn{
@@ -442,14 +442,14 @@ footer ul li a:hoover{
         top:5rem;
         right: 5%;
         height: fit-content;
-        width: 18rem;
+        width: 12rem;
         flex-direction: column;
         gap: 0;
         display: none;
     }
     .nav__menu li{
         width: 100%;
-        height: 5.8rem;
+        height: 3.2rem;
         animation: animateNavItems 400ms linear forwards;
         transform-origin: top right;
         opacity: 0;
